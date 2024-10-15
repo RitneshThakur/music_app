@@ -29,7 +29,7 @@ class _HomeViewState extends State<HomeView> {
         if (perm.isPermanentlyDenied) {
           openAppSettings();
         } else {
-          checkPermission();  // Recheck permission if denied
+          checkPermission();  
         }
       }
     }
@@ -65,7 +65,7 @@ class _HomeViewState extends State<HomeView> {
               itemBuilder: (context, index) {
                 return ListTile(
                   title: MyText(snapshot.data![index].displayNameWOExt),
-                  subtitle: MyText(snapshot.data![index].artist ?? 'Unknown Artist'), // Handling null artist
+                  subtitle: MyText(snapshot.data![index].artist ?? 'Unknown Artist'), 
                 );
               },
             );
